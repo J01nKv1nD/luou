@@ -127,7 +127,7 @@ static bool supports_full_lightuserdata(lua_State *L)
 			// Try to push pointer with all bits set.
 			lua_pushlightuserdata(L, (void*)(~((size_t)0)));
 			return 1;
-		}, 0, NULL);
+		}, 0);
 
 		supported = lua_pcall(L, 0, 1, 0) == 0;
 		checked = true;

@@ -393,7 +393,6 @@ LUA_API void lua_unref(lua_State* L, int ref);
 #define lua_islightuserdata(L, n) (lua_type(L, (n)) == LUA_TLIGHTUSERDATA)
 #define lua_isnil(L, n) (lua_type(L, (n)) == LUA_TNIL)
 #define lua_isboolean(L, n) (lua_type(L, (n)) == LUA_TBOOLEAN)
-#define lua_isinteger64(L, n) (lua_type(L, (n)) == LUA_TINTEGER)
 #define lua_isvector(L, n) (lua_type(L, (n)) == LUA_TVECTOR)
 #define lua_isthread(L, n) (lua_type(L, (n)) == LUA_TTHREAD)
 #define lua_isbuffer(L, n) (lua_type(L, (n)) == LUA_TBUFFER)
@@ -402,7 +401,7 @@ LUA_API void lua_unref(lua_State* L, int ref);
 
 #define lua_pushliteral(L, s) lua_pushlstring(L, "" s, (sizeof(s) / sizeof(char)) - 1)
 #define lua_pushcfunction(L, fn, debugname) lua_pushcclosurek(L, fn, debugname, 0, NULL)
-#define lua_pushcclosure(L, fn, debugname, nup, NUll) lua_pushcclosurek(L, fn, debugname, nup, NULL)
+#define lua_pushcclosure(L, fn, debugname, nup) lua_pushcclosurek(L, fn, debugname, nup, NULL)
 #define lua_pushlightuserdata(L, p) lua_pushlightuserdatatagged(L, p, 0)
 
 #define lua_rawgetp(L, idx, p) lua_rawgetptagged(L, idx, p, 0)
