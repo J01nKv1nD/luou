@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblove_sound_lullaby.a CMakeFiles/love_sound_lullaby.dir/src/modules/sound/lullaby/FLACDecoder.cpp.o CMakeFiles/love_sound_lullaby.dir/src/modules/sound/lullaby/ModPlugDecoder.cpp.o CMakeFiles/love_sound_lullaby.dir/src/modules/sound/lullaby/MP3Decoder.cpp.o CMakeFiles/love_sound_lullaby.dir/src/modules/sound/lullaby/Sound.cpp.o CMakeFiles/love_sound_lullaby.dir/src/modules/sound/lullaby/VorbisDecoder.cpp.o CMakeFiles/love_sound_lullaby.dir/src/modules/sound/lullaby/WaveDecoder.cpp.o
+/usr/bin/ranlib liblove_sound_lullaby.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblove_3p_ddsparse.a CMakeFiles/love_3p_ddsparse.dir/src/libraries/ddsparse/ddsparse.cpp.o
+/usr/bin/ranlib liblove_3p_ddsparse.a

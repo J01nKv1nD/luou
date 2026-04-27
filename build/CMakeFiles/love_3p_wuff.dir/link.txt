@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblove_3p_wuff.a CMakeFiles/love_3p_wuff.dir/src/libraries/Wuff/wuff.c.o CMakeFiles/love_3p_wuff.dir/src/libraries/Wuff/wuff_convert.c.o CMakeFiles/love_3p_wuff.dir/src/libraries/Wuff/wuff_internal.c.o CMakeFiles/love_3p_wuff.dir/src/libraries/Wuff/wuff_memory.c.o
+/usr/bin/ranlib liblove_3p_wuff.a

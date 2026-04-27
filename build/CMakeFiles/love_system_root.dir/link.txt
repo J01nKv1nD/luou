@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblove_system_root.a CMakeFiles/love_system_root.dir/src/modules/system/System.cpp.o CMakeFiles/love_system_root.dir/src/modules/system/wrap_System.cpp.o
+/usr/bin/ranlib liblove_system_root.a

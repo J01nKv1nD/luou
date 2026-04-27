@@ -1,0 +1,73 @@
+{
+	"abstract" : true,
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 125,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "lovedep::Lua::@6890427a1f51a3e7e1df",
+	"imported" : true,
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 2,
+			"fragment" : "Luau.VM"
+		},
+		{
+			"backtrace" : 2,
+			"fragment" : "Luau.Compiler"
+		},
+		{
+			"backtrace" : 2,
+			"fragment" : "Luau.Ast"
+		},
+		{
+			"backtrace" : 2,
+			"fragment" : "Luau.Config"
+		},
+		{
+			"backtrace" : 2,
+			"fragment" : "Luau.Common"
+		}
+	],
+	"local" : true,
+	"name" : "lovedep::Lua",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

@@ -107,7 +107,8 @@ int w_Source_seek(lua_State *L)
 	Source *t = luax_checksource(L, 1);
 	double offset = luaL_checknumber(L, 2);
 	if (offset < 0)
-		return luaL_argerror(L, 2, "can't seek to a negative position");
+		 luaL_argerror(L, 2, "can't seek to a negative position");
+		 return 0;
 
 	Source::Unit u = Source::UNIT_SECONDS;
 	const char *unit = lua_isnoneornil(L, 3) ? 0 : lua_tostring(L, 3);

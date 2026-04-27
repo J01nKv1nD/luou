@@ -20,6 +20,7 @@
 
 #include "config.h"
 #include "runtime.h"
+#include "common/Variant.h"
 
 // LOVE
 #include "Module.h"
@@ -350,7 +351,8 @@ bool luax_checkboolflag(lua_State *L, int table_index, const char *key)
 	if (lua_type(L, -1) != LUA_TBOOLEAN)
 	{
 		std::string err = "expected boolean field '" + std::string(key) + "' in table";
-		return luaL_argerror(L, table_index, err.c_str());
+		 luaL_argerror(L, table_index, err.c_str());
+		 return 0;
 	}
 	else
 		retval = luax_toboolean(L, -1);
@@ -367,7 +369,7 @@ int luax_checkintflag(lua_State *L, int table_index, const char *key)
 	if (!lua_isnumber(L, -1))
 	{
 		std::string err = "expected integer field '" + std::string(key) + "' in table";
-		return luaL_argerror(L, table_index, err.c_str());
+		 luaL_argerror(L, table_index, err.c_str());  return 0;
 	}
 	else
 		retval = (int) luaL_checkinteger(L, -1);
@@ -380,7 +382,7 @@ int luax_assert_argc(lua_State *L, int min)
 {
 	int argc = lua_gettop(L);
 	if (argc < min)
-		return luaL_error(L, "Incorrect number of arguments. Got [%d], expected at least [%d]", argc, min);
+		 luaL_error(L, "Incorrect number of arguments. Got [%d], expected at least [%d]", argc, min); return 0;
 	return 0;
 }
 
@@ -388,27 +390,33 @@ int luax_assert_argc(lua_State *L, int min, int max)
 {
 	int argc = lua_gettop(L);
 	if (argc < min || argc > max)
-		return luaL_error(L, "Incorrect number of arguments. Got [%d], expected [%d-%d]", argc, min, max);
+		 luaL_error(L, "Incorrect number of arguments. Got [%d], expected [%d-%d]", argc, min, max); return 0;
 	return 0;
 }
 
 int luax_assert_function(lua_State *L, int idx)
 {
 	if (!lua_isfunction(L, idx))
-		return luaL_error(L, "Argument must be of type \"function\".");
+		 luaL_error(L, "Argument must be of type \"function\"."); return 0;
 	return 0;
 }
 
 int luax_assert_nilerror(lua_State *L, int idx)
 {
-	if (lua_isnoneornil(L, idx))
-	{
-		if (lua_isstring(L, idx + 1))
-			return luaL_error(L, lua_tostring(L, idx + 1));
-		else
-			return luaL_error(L, "assertion failed!");
-	}
-	return 0;
+    if (lua_isnoneornil(L, idx))
+    {
+        if (lua_isstring(L, idx + 1))
+        {
+            luaL_error(L, lua_tostring(L, idx + 1));
+            return 0;
+        }
+        else
+        {
+            luaL_error(L, "assertion failed!");
+            return 0;
+        }
+    }
+    return 0;
 }
 
 void luax_setfuncs(lua_State *L, const luaL_Reg *l)
@@ -600,7 +608,7 @@ int luax_register_searcher(lua_State *L, lua_CFunction f, int pos)
 	lua_getglobal(L, "package");
 
 	if (lua_isnil(L, -1))
-		return luaL_error(L, "Can't register searcher: package table does not exist.");
+		 luaL_error(L, "Can't register searcher: package table does not exist."); return 0;
 
 	lua_getfield(L, -1, "loaders");
 
@@ -612,7 +620,7 @@ int luax_register_searcher(lua_State *L, lua_CFunction f, int pos)
 	}
 
 	if (lua_isnil(L, -1))
-		return luaL_error(L, "Can't register searcher: package.loaders table does not exist.");
+		 luaL_error(L, "Can't register searcher: package.loaders table does not exist.");return 0;
 
 	lua_pushcfunction(L, f);
 	luax_table_insert(L, -2, -1, pos);
@@ -861,11 +869,11 @@ void luax_pushvariant(lua_State *L, const Variant &v)
 int luax_getfunction(lua_State *L, const char *mod, const char *fn)
 {
 	lua_getglobal(L, "love");
-	if (lua_isnil(L, -1)) return luaL_error(L, "Could not find global love!");
+	if (lua_isnil(L, -1))  luaL_error(L, "Could not find global love!"); return 0;
 	lua_getfield(L, -1, mod);
-	if (lua_isnil(L, -1)) return luaL_error(L, "Could not find love.%s!", mod);
+	if (lua_isnil(L, -1))  luaL_error(L, "Could not find love.%s!", mod); return 0;
 	lua_getfield(L, -1, fn);
-	if (lua_isnil(L, -1)) return luaL_error(L, "Could not find love.%s.%s!", mod, fn);
+	if (lua_isnil(L, -1))  luaL_error(L, "Could not find love.%s.%s!", mod, fn); return 0;
 
 	lua_remove(L, -2); // remove mod
 	lua_remove(L, -2); // remove fn
@@ -1013,7 +1021,7 @@ int luax_insistregistry(lua_State *L, Registry r)
 	case REGISTRY_OBJECTS:
 		return luax_insist(L, LUA_REGISTRYINDEX, "_loveobjects");
 	default:
-		return luaL_error(L, "Attempted to use invalid registry.");
+		 luaL_error(L, "Attempted to use invalid registry."); return 0;
 	}
 }
 
@@ -1027,7 +1035,7 @@ int luax_getregistry(lua_State *L, Registry r)
 		lua_getfield(L, LUA_REGISTRYINDEX, "_loveobjects");
 		return 1;
 	default:
-		return luaL_error(L, "Attempted to use invalid registry.");
+		 luaL_error(L, "Attempted to use invalid registry."); return 0;
 	}
 }
 
@@ -1107,12 +1115,12 @@ extern "C" int luax_typerror(lua_State *L, int narg, const char *tname)
 		argtname = lua_typename(L, argtype);
 
 	const char *msg = lua_pushfstring(L, "%s expected, got %s", tname, argtname);
-	return luaL_argerror(L, narg, msg);
+	 luaL_argerror(L, narg, msg);  return 0;
 }
 
 int luax_enumerror(lua_State *L, const char *enumName, const char *value)
 {
-	return luaL_error(L, "Invalid %s: %s", enumName, value);
+	 luaL_error(L, "Invalid %s: %s", enumName, value); return 0;
 }
 
 int luax_enumerror(lua_State *L, const char *enumName, const std::vector<std::string> &values, const char *value)
@@ -1126,15 +1134,15 @@ int luax_enumerror(lua_State *L, const char *enumName, const std::vector<std::st
 	}
 
 	std::string valueString = valueStream.str();
-	return luaL_error(L, "Invalid %s '%s', expected one of: %s", enumName, value, valueString.c_str());
+	luaL_error(L, "Invalid %s '%s', expected one of: %s", enumName, value, valueString.c_str()); return 0;
 }
 
 size_t luax_objlen(lua_State *L, int ndx)
 {
 #if LUA_VERSION_NUM == 501
-	return lua_objlen(L, ndx);
+	 lua_objlen(L, ndx);  return 0;
 #else
-	return lua_rawlen(L, ndx);
+	 lua_rawset(L, ndx);  return 0;
 #endif
 }
 
@@ -1181,15 +1189,7 @@ Type *luax_type(lua_State *L, int idx)
 
 int luax_resume(lua_State *L, int nargs, int* nres)
 {
-#if LUA_VERSION_NUM >= 504
-	return lua_resume(L, nullptr, nargs, nres);
-#elif LUA_VERSION_NUM >= 502
-	LOVE_UNUSED(nres);
-	return lua_resume(L, nullptr, nargs);
-#else
-	LOVE_UNUSED(nres);
-	return lua_resume(L, nargs);
-#endif
+    return lua_resume(L, nullptr, nargs);
 }
 
 } // love

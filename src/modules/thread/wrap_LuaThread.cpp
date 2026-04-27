@@ -45,7 +45,7 @@ int w_Thread_start(lua_State *L)
 		if (args.back().getType() == Variant::UNKNOWN)
 		{
 			args.clear();
-			return luaL_argerror(L, i+2, "boolean, number, string, love type, or flat table expected");
+			 luaL_argerror(L, i+2, "boolean, number, string, love type, or flat table expected");  return 0;
 		}
 	}
 

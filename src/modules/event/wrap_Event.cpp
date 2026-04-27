@@ -24,6 +24,7 @@
 #include "common/runtime.h"
 #include "common/Reference.h"
 #include "sdl/Event.h"
+#include "luacode.h"
 
 #include <algorithm>
 
@@ -175,21 +176,25 @@ static int drawCallbackInner(lua_State *L)
 
 static void drawCallback(void *context, Variant *returnVal0, Variant *returnVal1)
 {
-	auto r = (Reference *)context;
-	lua_State *L = r->getPinnedL();
+    auto r = (Reference *)context;
+    lua_State *L = r->getPinnedL();
 
-	DrawCallbackData data = {};
-	data.r = r;
+    DrawCallbackData data = {};
+    data.r = r;
 
-	// pcall into C code to catch errors from checkvariant as well as the lua_call.
-	int err = lua_cpcall(L, drawCallbackInner, &data);
+    // --- LUAU FIX START ---
+    // Instead of lua_cpcall, we push the function and the data manually
+    lua_pushcfunction(L, drawCallbackInner); // removed 3rd param "NULL"
+    lua_pushlightuserdata(L, &data);
+    int err = lua_pcall(L, 1, 0, 0); 
+    // --- LUAU FIX END ---
 
-	// Unfortunately, this eats the stack trace, too bad.
-	if (err != 0)
-		throw love::Exception("Error in modal draw callback: %s", lua_tostring(L, -1));
+    // Unfortunately, this eats the stack trace, too bad.
+    if (err != 0)
+        throw love::Exception("Error in modal draw callback: %s", lua_tostring(L, -1));
 
-	*returnVal0 = data.returnValues[0];
-	*returnVal1 = data.returnValues[1];
+    *returnVal0 = data.returnValues[0];
+    *returnVal1 = data.returnValues[1];
 }
 
 static void cleanupCallback(void *context)
@@ -259,6 +264,23 @@ static const luaL_Reg functions[] =
 
 extern "C" int luaopen_love_event(lua_State *L)
 {
+
+	// 1. Compile the Lua source into Luau Bytecode
+	size_t bytecodeSize = 0;
+	char* bytecode = luau_compile(event_lua, sizeof(event_lua), NULL, &bytecodeSize);
+
+	// 2. Load the bytecode into the VM
+	if (luau_load(L, "=[love \"wrap_Event.lua\"]", bytecode, bytecodeSize, 0) == 0)
+	{
+		free(bytecode); // Clean up the compiler memory
+		lua_call(L, 0, 0);
+	}
+	else
+	{
+		free(bytecode);
+		lua_error(L);
+	}
+
 	Event *instance = instance();
 	if (instance == nullptr)
 	{

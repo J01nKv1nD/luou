@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblove_audio_null.a CMakeFiles/love_audio_null.dir/src/modules/audio/null/Audio.cpp.o CMakeFiles/love_audio_null.dir/src/modules/audio/null/Source.cpp.o CMakeFiles/love_audio_null.dir/src/modules/audio/null/RecordingDevice.cpp.o
+/usr/bin/ranlib liblove_audio_null.a

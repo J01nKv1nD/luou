@@ -1624,7 +1624,7 @@ int w_newShader(lua_State *L)
 	}
 
 	if (should_error)
-		return lua_error(L);
+		 lua_error(L); return 0;
 
 	return 1;
 }
@@ -1662,7 +1662,7 @@ int w_newComputeShader(lua_State* L)
 	}
 
 	if (should_error)
-		return lua_error(L);
+		 lua_error(L);  return 0;
 
 	return 1;
 }

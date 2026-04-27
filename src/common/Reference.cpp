@@ -18,6 +18,10 @@
  * 3. This notice may not be removed or altered from any source distribution.
  **/
 
+// Ensure that lua.hpp and runtime.h are the first included files.
+#include "common/lua.hpp"
+#include "common/runtime.h"
+
 #include "Reference.h"
 #include "runtime.h"
 

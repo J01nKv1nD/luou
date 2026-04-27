@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblove_3p_xxhash.a CMakeFiles/love_3p_xxhash.dir/src/libraries/xxHash/xxhash.c.o
+/usr/bin/ranlib liblove_3p_xxhash.a

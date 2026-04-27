@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblove_window_sdl.a CMakeFiles/love_window_sdl.dir/src/modules/window/sdl/Window.cpp.o
+/usr/bin/ranlib liblove_window_sdl.a

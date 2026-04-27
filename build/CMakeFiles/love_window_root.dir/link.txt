@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblove_window_root.a CMakeFiles/love_window_root.dir/src/modules/window/Window.cpp.o CMakeFiles/love_window_root.dir/src/modules/window/wrap_Window.cpp.o
+/usr/bin/ranlib liblove_window_root.a

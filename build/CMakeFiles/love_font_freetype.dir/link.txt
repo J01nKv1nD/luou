@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblove_font_freetype.a CMakeFiles/love_font_freetype.dir/src/modules/font/freetype/Font.cpp.o CMakeFiles/love_font_freetype.dir/src/modules/font/freetype/HarfbuzzShaper.cpp.o CMakeFiles/love_font_freetype.dir/src/modules/font/freetype/TrueTypeRasterizer.cpp.o
+/usr/bin/ranlib liblove_font_freetype.a

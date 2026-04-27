@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblove_touch_sdl.a CMakeFiles/love_touch_sdl.dir/src/modules/touch/sdl/Touch.cpp.o
+/usr/bin/ranlib liblove_touch_sdl.a

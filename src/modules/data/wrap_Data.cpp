@@ -92,7 +92,8 @@ int w_Data_performAtomic(lua_State *L)
 
 	// Unfortunately, this eats the stack trace, too bad.
 	if (err != 0)
-		return lua_error(L);
+		 lua_error(L);
+		 return 0;
 
 	// The function and everything after it in the stack are eaten by the pcall,
 	// leaving only the Data object. Everything else is a return value.

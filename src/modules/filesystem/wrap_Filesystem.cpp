@@ -347,8 +347,8 @@ FileData *luax_getfiledata(lua_State *L, int idx, bool ioerror, int &nresults)
 
 	if (!data && !file)
 	{
-		nresults = luaL_argerror(L, idx, "filename, File, or FileData expected");
-		return nullptr; // Never reached.
+		luaL_argerror(L, idx, "filename, File, or FileData expected");
+		return nullptr;
 	}
 	else if (file && !data)
 	{
@@ -450,7 +450,7 @@ int w_newFileData(lua_State *L)
 	else if (lua_isstring(L, 1))
 		ptr = luaL_checklstring(L, 1, &length);
 	else
-		return luaL_argerror(L, 1, "string or Data expected");
+		 luaL_argerror(L, 1, "string or Data expected"); return 0;
 
 	const char *filename = luaL_checkstring(L, 2);
 
@@ -674,7 +674,7 @@ static int w_write_or_append(lua_State *L, File::Mode mode)
 	else if (lua_isstring(L, 2))
 		input = lua_tolstring(L, 2, &len);
 	else
-		return luaL_argerror(L, 2, "string or Data expected");
+		 luaL_argerror(L, 2, "string or Data expected"); return 0;
 
 	// Get how much we should write. Length of string default.
 	len = luaL_optinteger(L, 3, len);
@@ -735,7 +735,7 @@ int w_lines(lua_State *L)
 		file->release();
 	}
 	else
-		return luaL_argerror(L, 1, "expected filename.");
+		 luaL_argerror(L, 1, "expected filename."); return 0;
 
 	lua_pushstring(L, ""); // buffer
 	lua_pushstring(L, 0); // buffer offset

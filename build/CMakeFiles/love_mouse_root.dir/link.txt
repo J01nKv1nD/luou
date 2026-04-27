@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblove_mouse_root.a CMakeFiles/love_mouse_root.dir/src/modules/mouse/Cursor.cpp.o CMakeFiles/love_mouse_root.dir/src/modules/mouse/wrap_Cursor.cpp.o CMakeFiles/love_mouse_root.dir/src/modules/mouse/wrap_Mouse.cpp.o
+/usr/bin/ranlib liblove_mouse_root.a

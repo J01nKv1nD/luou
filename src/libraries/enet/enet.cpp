@@ -127,7 +127,7 @@ static bool supports_full_lightuserdata(lua_State *L)
 			// Try to push pointer with all bits set.
 			lua_pushlightuserdata(L, (void*)(~((size_t)0)));
 			return 1;
-		}, 0);
+		}, 0, NULL);
 
 		supported = lua_pcall(L, 0, 1, 0) == 0;
 		checked = true;
@@ -362,7 +362,7 @@ static int linked_version(lua_State *l) {
 static int host_service(lua_State *l) {
 	ENetHost *host = check_host(l, 1);
 	if (!host) {
-		return luaL_error(l, "Tried to index a nil host!");
+		 luaL_error(l, "Tried to index a nil host!"); return 0;
 	}
 	ENetEvent event;
 	int timeout = 0, out;
@@ -372,7 +372,7 @@ static int host_service(lua_State *l) {
 
 	out = enet_host_service(host, &event, timeout);
 	if (out == 0) return 0;
-	if (out < 0) return luaL_error(l, "Error during service");
+	if (out < 0)  luaL_error(l, "Error during service");  return 0;
 
 	push_event(l, &event);
 	return 1;
@@ -384,12 +384,12 @@ static int host_service(lua_State *l) {
 static int host_check_events(lua_State *l) {
 	ENetHost *host = check_host(l, 1);
 	if (!host) {
-		return luaL_error(l, "Tried to index a nil host!");
+		 luaL_error(l, "Tried to index a nil host!");  return 0;
 	}
 	ENetEvent event;
 	int out = enet_host_check_events(host, &event);
 	if (out == 0) return 0;
-	if (out < 0) return luaL_error(l, "Error checking event");
+	if (out < 0)  luaL_error(l, "Error checking event");  return 0;
 
 	push_event(l, &event);
 	return 1;
@@ -402,7 +402,7 @@ static int host_check_events(lua_State *l) {
 static int host_compress_with_range_coder(lua_State *l) {
 	ENetHost *host = check_host(l, 1);
 	if (!host) {
-		return luaL_error(l, "Tried to index a nil host!");
+		 luaL_error(l, "Tried to index a nil host!");  return 0;
 	}
 
 	int result = enet_host_compress_with_range_coder (host);
@@ -425,7 +425,7 @@ static int host_compress_with_range_coder(lua_State *l) {
 static int host_connect(lua_State *l) {
 	ENetHost *host = check_host(l, 1);
 	if (!host) {
-		return luaL_error(l, "Tried to index a nil host!");
+		 luaL_error(l, "Tried to index a nil host!");  return 0;
 	}
 	ENetAddress address;
 	ENetPeer *peer;
@@ -446,7 +446,7 @@ static int host_connect(lua_State *l) {
 	peer = enet_host_connect(host, &address, channel_count, data);
 
 	if (peer == NULL) {
-		return luaL_error(l, "Failed to create peer");
+		 luaL_error(l, "Failed to create peer");  return 0;
 	}
 
 	push_peer(l, peer);
@@ -457,7 +457,7 @@ static int host_connect(lua_State *l) {
 static int host_flush(lua_State *l) {
 	ENetHost *host = check_host(l, 1);
 	if (!host) {
-		return luaL_error(l, "Tried to index a nil host!");
+		 luaL_error(l, "Tried to index a nil host!");  return 0;
 	}
 	enet_host_flush(host);
 	return 0;
@@ -466,7 +466,7 @@ static int host_flush(lua_State *l) {
 static int host_broadcast(lua_State *l) {
 	ENetHost *host = check_host(l, 1);
 	if (!host) {
-		return luaL_error(l, "Tried to index a nil host!");
+		 luaL_error(l, "Tried to index a nil host!");  return 0;
 	}
 
 	enet_uint8 channel_id;
@@ -479,7 +479,7 @@ static int host_broadcast(lua_State *l) {
 static int host_channel_limit(lua_State *l) {
 	ENetHost *host = check_host(l, 1);
 	if (!host) {
-		return luaL_error(l, "Tried to index a nil host!");
+		 luaL_error(l, "Tried to index a nil host!");  return 0;
 	}
 	int limit = (int) luaL_checknumber(l, 2);
 	enet_host_channel_limit(host, limit);
@@ -489,7 +489,7 @@ static int host_channel_limit(lua_State *l) {
 static int host_bandwidth_limit(lua_State *l) {
 	ENetHost *host = check_host(l, 1);
 	if (!host) {
-		return luaL_error(l, "Tried to index a nil host!");
+		 luaL_error(l, "Tried to index a nil host!");  return 0;
 	}
 	enet_uint32 in_bandwidth = (int) luaL_checknumber(l, 2);
 	enet_uint32 out_bandwidth = (int) luaL_checknumber(l, 2);
@@ -500,7 +500,7 @@ static int host_bandwidth_limit(lua_State *l) {
 static int host_get_socket_address(lua_State *l) {
 	ENetHost *host = check_host(l, 1);
 	if (!host) {
-		return luaL_error(l, "Tried to index a nil host!");
+		 luaL_error(l, "Tried to index a nil host!");  return 0;
 	}
 	ENetAddress address;
 	enet_socket_get_address (host->socket, &address);
@@ -516,7 +516,7 @@ static int host_get_socket_address(lua_State *l) {
 static int host_total_sent_data(lua_State *l) {
 	ENetHost *host = check_host(l, 1);
 	if (!host) {
-		return luaL_error(l, "Tried to index a nil host!");
+		 luaL_error(l, "Tried to index a nil host!");  return 0;
 	}
 
 	lua_pushinteger (l, host->totalSentData);
@@ -527,7 +527,7 @@ static int host_total_sent_data(lua_State *l) {
 static int host_total_received_data(lua_State *l) {
 	ENetHost *host = check_host(l, 1);
 	if (!host) {
-		return luaL_error(l, "Tried to index a nil host!");
+		 luaL_error(l, "Tried to index a nil host!");  return 0;
 	}
 
 	lua_pushinteger (l, host->totalReceivedData);
@@ -537,7 +537,7 @@ static int host_total_received_data(lua_State *l) {
 static int host_service_time(lua_State *l) {
 	ENetHost *host = check_host(l, 1);
 	if (!host) {
-		return luaL_error(l, "Tried to index a nil host!");
+		 luaL_error(l, "Tried to index a nil host!");  return 0;
 	}
 
 	lua_pushinteger (l, host->serviceTime);
@@ -548,7 +548,7 @@ static int host_service_time(lua_State *l) {
 static int host_peer_count(lua_State *l) {
 	ENetHost *host = check_host(l, 1);
 	if (!host) {
-		return luaL_error(l, "Tried to index a nil host!");
+		 luaL_error(l, "Tried to index a nil host!");  return 0;
 	}
 
 	lua_pushinteger (l, host->peerCount);
@@ -559,7 +559,7 @@ static int host_peer_count(lua_State *l) {
 static int host_get_peer(lua_State *l) {
 	ENetHost *host = check_host(l, 1);
 	if (!host) {
-		return luaL_error(l, "Tried to index a nil host!");
+		 luaL_error(l, "Tried to index a nil host!");  return 0;
 	}
 
 	int peer_index = (int) luaL_checknumber(l, 2) - 1;

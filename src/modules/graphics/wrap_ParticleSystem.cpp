@@ -504,7 +504,7 @@ int w_ParticleSystem_setColors(lua_State *L)
 			luaL_checktype(L, i + 2, LUA_TTABLE);
 
 			if (luax_objlen(L, i + 2) < 3)
-				return luaL_argerror(L, i + 2, "expected 4 color components");
+				 luaL_argerror(L, i + 2, "expected 4 color components");  return 0;
 
 			for (int j = 0; j < 4; j++)
 				// push args[i+2][j+1] onto the stack

@@ -180,7 +180,8 @@ int w_File_write(lua_State *L)
 	}
 	else
 	{
-		return luaL_argerror(L, 2, "string or data expected");
+		 luaL_argerror(L, 2, "string or data expected");
+		 return 0;
 	}
 
 	luax_pushboolean(L, result);

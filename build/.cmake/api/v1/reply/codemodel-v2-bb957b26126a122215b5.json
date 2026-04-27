@@ -1,0 +1,871 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Freetype::Freetype::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Freetype__Freetype-Debug-9bc7efbb52570b0d6ff3.json",
+					"name" : "Freetype::Freetype",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OpenAL::OpenAL::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenAL__OpenAL-Debug-0ae4d6292a959df58470.json",
+					"name" : "OpenAL::OpenAL",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "PkgConfig::PC_LIBUNWIND::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PkgConfig__PC_LIBUNWIND-Debug-1e2828681f114b320ce1.json",
+					"name" : "PkgConfig::PC_LIBUNWIND",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SDL3::Headers::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SDL3__Headers-Debug-2f40ff4c8efe2543d129.json",
+					"name" : "SDL3::Headers",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SDL3::SDL3-shared::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SDL3__SDL3-shared-Debug-26c22ca3de91a17b2593.json",
+					"name" : "SDL3::SDL3-shared",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SDL3::SDL3_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SDL3__SDL3_test-Debug-bb8d069265ba55f639a6.json",
+					"name" : "SDL3::SDL3_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZLIB::ZLIB::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZLIB__ZLIB-Debug-3e348b81cf4ae6ba2d26.json",
+					"name" : "ZLIB::ZLIB",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_audio::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_audio-Debug-b226a9ae6a0f137442be.json",
+					"name" : "love_audio",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_event::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_event-Debug-265c5e2f1860c55e379f.json",
+					"name" : "love_event",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_filesystem::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_filesystem-Debug-050966e55803c1d9a756.json",
+					"name" : "love_filesystem",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_font::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_font-Debug-e9f601a7b6cbb07b5b69.json",
+					"name" : "love_font",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_graphics::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_graphics-Debug-b69676cdecb8d976cae1.json",
+					"name" : "love_graphics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_image::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_image-Debug-6bc92c80c830934e8315.json",
+					"name" : "love_image",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_joystick::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_joystick-Debug-ce4d067f5c046aeea6f1.json",
+					"name" : "love_joystick",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_keyboard::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_keyboard-Debug-63c797b3cdb14e7abfad.json",
+					"name" : "love_keyboard",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_mouse::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_mouse-Debug-c91f88b508dee8837999.json",
+					"name" : "love_mouse",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_physics::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_physics-Debug-eda0bb10973a5250807c.json",
+					"name" : "love_physics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_sensor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_sensor-Debug-50cb6c5654f688698c42.json",
+					"name" : "love_sensor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_sound::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_sound-Debug-ecbcadc72bae708ee86a.json",
+					"name" : "love_sound",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_system::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_system-Debug-5ccae54accf4cb5e037d.json",
+					"name" : "love_system",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_thread::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_thread-Debug-6a1ed3f3710a92f4c677.json",
+					"name" : "love_thread",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_touch::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_touch-Debug-80f54145f42ff346944a.json",
+					"name" : "love_touch",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_video::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_video-Debug-cc91b524c63bbc1e16ca.json",
+					"name" : "love_video",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_window::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_window-Debug-d6d590ea1b57748dfad6.json",
+					"name" : "love_window",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lovedep::Freetype::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lovedep__Freetype-Debug-7467c3993c88397cd177.json",
+					"name" : "lovedep::Freetype",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lovedep::Harfbuzz::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lovedep__Harfbuzz-Debug-650b5e7cd08b8dc15c6a.json",
+					"name" : "lovedep::Harfbuzz",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lovedep::Lua::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lovedep__Lua-Debug-ef13977f5aec8f03f090.json",
+					"name" : "lovedep::Lua",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lovedep::Modplug::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lovedep__Modplug-Debug-e4f66f4a5e33cb30cd7a.json",
+					"name" : "lovedep::Modplug",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lovedep::Ogg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lovedep__Ogg-Debug-996697b4453f5ca0d55f.json",
+					"name" : "lovedep::Ogg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lovedep::OpenAL::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lovedep__OpenAL-Debug-1734b0c51579e78454f8.json",
+					"name" : "lovedep::OpenAL",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lovedep::SDL::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lovedep__SDL-Debug-0d0a2d52496028cd5662.json",
+					"name" : "lovedep::SDL",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lovedep::Theora::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lovedep__Theora-Debug-b1e11c1fdc2421f2d899.json",
+					"name" : "lovedep::Theora",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lovedep::Vorbis::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lovedep__Vorbis-Debug-7487f72fa49fbc637027.json",
+					"name" : "lovedep::Vorbis",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lovedep::Zlib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lovedep__Zlib-Debug-8b6c8cd758a001a7741d.json",
+					"name" : "lovedep::Zlib",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33
+					],
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-3015c870e771486d814a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.19"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "love",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "liblove::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-liblove-Debug-8f8382e6a689af62d458.json",
+					"name" : "liblove",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love-Debug-bebc47294b766f7e0240.json",
+					"name" : "love",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_3p_box2d::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_3p_box2d-Debug-b7c2eb2b9b2fe99c1e08.json",
+					"name" : "love_3p_box2d",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_3p_ddsparse::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_3p_ddsparse-Debug-76edfd6f8c8e5437a24f.json",
+					"name" : "love_3p_ddsparse",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_3p_enet::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_3p_enet-Debug-ac1c8a289201733b6524.json",
+					"name" : "love_3p_enet",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_3p_glad::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_3p_glad-Debug-d7e21f52dca8e7c3b6b9.json",
+					"name" : "love_3p_glad",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_3p_glslang::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_3p_glslang-Debug-532ead949b5d2bb616e5.json",
+					"name" : "love_3p_glslang",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_3p_lodepng::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_3p_lodepng-Debug-44cb49a9ba2a60cc0973.json",
+					"name" : "love_3p_lodepng",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_3p_luahttps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_3p_luahttps-Debug-9f843e83644229408808.json",
+					"name" : "love_3p_luahttps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_3p_luasocket::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_3p_luasocket-Debug-979946d57e53d2bef063.json",
+					"name" : "love_3p_luasocket",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_3p_lz4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_3p_lz4-Debug-ede23cc4c00d630fd570.json",
+					"name" : "love_3p_lz4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_3p_noise1234::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_3p_noise1234-Debug-542d45a462e91a337d67.json",
+					"name" : "love_3p_noise1234",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_3p_physfs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_3p_physfs-Debug-0764f9659c2f3a8fef9f.json",
+					"name" : "love_3p_physfs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_3p_spirv_cross::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_3p_spirv_cross-Debug-37a8833a9e94cdfe4730.json",
+					"name" : "love_3p_spirv_cross",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_3p_wuff::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_3p_wuff-Debug-c71d40981f453e16b19c.json",
+					"name" : "love_3p_wuff",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_3p_xxhash::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_3p_xxhash-Debug-014675d3777ca191435b.json",
+					"name" : "love_3p_xxhash",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_audio_null::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_audio_null-Debug-2bb91ace8f263e2c6ef1.json",
+					"name" : "love_audio_null",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_audio_openal::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_audio_openal-Debug-0abe58612a00c41d5003.json",
+					"name" : "love_audio_openal",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_audio_root::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_audio_root-Debug-31f15faa13bb12affa71.json",
+					"name" : "love_audio_root",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_common::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_common-Debug-60bb29816de4768427bf.json",
+					"name" : "love_common",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_data::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_data-Debug-810f134ad40b5443faa1.json",
+					"name" : "love_data",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_event_root::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_event_root-Debug-a95263c3799ea4f9caf7.json",
+					"name" : "love_event_root",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_event_sdl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_event_sdl-Debug-f8e83eb9a25c903cc7f2.json",
+					"name" : "love_event_sdl",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_filesystem_physfs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_filesystem_physfs-Debug-bf07c6f90d9658c17dae.json",
+					"name" : "love_filesystem_physfs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_filesystem_root::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_filesystem_root-Debug-3970072eb14bce674ca3.json",
+					"name" : "love_filesystem_root",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_font_freetype::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_font_freetype-Debug-63e8e6f2a93bdf9976db.json",
+					"name" : "love_font_freetype",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_font_root::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_font_root-Debug-c57c04b07180da8cd771.json",
+					"name" : "love_font_root",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_graphics_opengl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_graphics_opengl-Debug-34517851243f47473392.json",
+					"name" : "love_graphics_opengl",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_graphics_root::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_graphics_root-Debug-02657eccc9d1b7d7c54d.json",
+					"name" : "love_graphics_root",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_graphics_vulkan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_graphics_vulkan-Debug-238ee51351172036ecc7.json",
+					"name" : "love_graphics_vulkan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_image_magpie::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_image_magpie-Debug-bf0457fe387f9c9e5a87.json",
+					"name" : "love_image_magpie",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_image_root::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_image_root-Debug-2f0aa98ec1ea6cb7a128.json",
+					"name" : "love_image_root",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_joystick_root::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_joystick_root-Debug-271386828450bacebebd.json",
+					"name" : "love_joystick_root",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_joystick_sdl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_joystick_sdl-Debug-65097c6ad65b13bd627d.json",
+					"name" : "love_joystick_sdl",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_keyboard_root::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_keyboard_root-Debug-581b7d535df34951eb07.json",
+					"name" : "love_keyboard_root",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_keyboard_sdl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_keyboard_sdl-Debug-d61428f509cec18875dc.json",
+					"name" : "love_keyboard_sdl",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_math::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_math-Debug-0707728fcc231fbfae62.json",
+					"name" : "love_math",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_mouse_root::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_mouse_root-Debug-26ded55eb98d808d2a6b.json",
+					"name" : "love_mouse_root",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_mouse_sdl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_mouse_sdl-Debug-4c497254760aa0b22804.json",
+					"name" : "love_mouse_sdl",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_physics_box2d::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_physics_box2d-Debug-39fe179bf480cc9d082d.json",
+					"name" : "love_physics_box2d",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_physics_root::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_physics_root-Debug-d86a709b69fa474ab172.json",
+					"name" : "love_physics_root",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_sensor_root::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_sensor_root-Debug-8152b8ec6cea49a8198b.json",
+					"name" : "love_sensor_root",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_sensor_sdl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_sensor_sdl-Debug-2eb27b4e9402863f7ac0.json",
+					"name" : "love_sensor_sdl",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_sound_lullaby::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_sound_lullaby-Debug-cf47f3f66b3825a8594f.json",
+					"name" : "love_sound_lullaby",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_sound_root::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_sound_root-Debug-eb12b30d1c3df549bf55.json",
+					"name" : "love_sound_root",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_system_root::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_system_root-Debug-366cf9811d732140b4dd.json",
+					"name" : "love_system_root",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_system_sdl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_system_sdl-Debug-50c333f50d3ca7a0d81c.json",
+					"name" : "love_system_sdl",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_thread_root::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_thread_root-Debug-c7fed90ea04640c8470d.json",
+					"name" : "love_thread_root",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_thread_sdl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_thread_sdl-Debug-c50f58edd37d76d0462b.json",
+					"name" : "love_thread_sdl",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_timer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_timer-Debug-ca332125e981f0297329.json",
+					"name" : "love_timer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_touch_root::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_touch_root-Debug-0f7639e78c8da12bad80.json",
+					"name" : "love_touch_root",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_touch_sdl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_touch_sdl-Debug-5b3fc43d146731288ed8.json",
+					"name" : "love_touch_sdl",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_video_root::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_video_root-Debug-5c9720d980742646cf07.json",
+					"name" : "love_video_root",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_video_theora::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_video_theora-Debug-afb11a85e08af243af63.json",
+					"name" : "love_video_theora",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_window_root::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_window_root-Debug-81c1923e5aeda91e587d.json",
+					"name" : "love_window_root",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "love_window_sdl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-love_window_sdl-Debug-9beaabbe62e60546b421.json",
+					"name" : "love_window_sdl",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/j01nk/luou/build",
+		"source" : "/home/j01nk/luou"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	}
+}

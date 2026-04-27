@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblove_audio_openal.a CMakeFiles/love_audio_openal.dir/src/modules/audio/openal/Audio.cpp.o CMakeFiles/love_audio_openal.dir/src/modules/audio/openal/Pool.cpp.o CMakeFiles/love_audio_openal.dir/src/modules/audio/openal/Source.cpp.o CMakeFiles/love_audio_openal.dir/src/modules/audio/openal/RecordingDevice.cpp.o CMakeFiles/love_audio_openal.dir/src/modules/audio/openal/Filter.cpp.o CMakeFiles/love_audio_openal.dir/src/modules/audio/openal/Effect.cpp.o
+/usr/bin/ranlib liblove_audio_openal.a

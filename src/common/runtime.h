@@ -21,7 +21,10 @@
 #ifndef LOVE_RUNTIME_H
 #define LOVE_RUNTIME_H
 
-// LOVE
+// Ensure that lua.hpp and runtime.h are the first included files.
+#include "common/lua.hpp"
+#include "common/runtime.h"
+
 #include "config.h"
 #include "types.h"
 #include "Object.h"
@@ -31,9 +34,6 @@
 // Lua
 extern "C" {
 	#define LUA_COMPAT_ALL
-	#include <lua.h>
-	#include <lualib.h>
-	#include <lauxlib.h>
 }
 
 // C++
@@ -699,7 +699,8 @@ int luax_catchexcept(lua_State *L, const T& func)
 	}
 
 	if (should_error)
-		return luaL_error(L, "%s", lua_tostring(L, -1));
+		luaL_error(L, "%s", lua_tostring(L, -1));
+		 return 0;
 
 	return 0;
 }
@@ -722,7 +723,7 @@ int luax_catchexcept(lua_State *L, const T& func, const F& finallyfunc)
 	finallyfunc(should_error);
 
 	if (should_error)
-		return luaL_error(L, "%s", lua_tostring(L, -1));
+		 luaL_error(L, "%s", lua_tostring(L, -1)); return 0;
 
 	return 0;
 }

@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblove_timer.a CMakeFiles/love_timer.dir/src/modules/timer/Timer.cpp.o CMakeFiles/love_timer.dir/src/modules/timer/wrap_Timer.cpp.o
+/usr/bin/ranlib liblove_timer.a

@@ -508,7 +508,7 @@ int w_Texture_renderTo(lua_State *L)
 			oldtargets.depthStencil.texture->release();
 
 		if (status != 0)
-			return lua_error(L);
+			 lua_error(L);  return 0;
 	}
 
 	return 0;

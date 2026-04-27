@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblove_joystick_root.a CMakeFiles/love_joystick_root.dir/src/modules/joystick/Joystick.cpp.o CMakeFiles/love_joystick_root.dir/src/modules/joystick/wrap_Joystick.cpp.o CMakeFiles/love_joystick_root.dir/src/modules/joystick/wrap_JoystickModule.cpp.o
+/usr/bin/ranlib liblove_joystick_root.a

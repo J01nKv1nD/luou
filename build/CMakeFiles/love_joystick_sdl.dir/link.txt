@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblove_joystick_sdl.a CMakeFiles/love_joystick_sdl.dir/src/modules/joystick/sdl/Joystick.cpp.o CMakeFiles/love_joystick_sdl.dir/src/modules/joystick/sdl/JoystickModule.cpp.o
+/usr/bin/ranlib liblove_joystick_sdl.a

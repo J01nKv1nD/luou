@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblove_touch_root.a CMakeFiles/love_touch_root.dir/src/modules/touch/Touch.cpp.o CMakeFiles/love_touch_root.dir/src/modules/touch/wrap_Touch.cpp.o
+/usr/bin/ranlib liblove_touch_root.a

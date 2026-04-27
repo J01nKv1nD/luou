@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblove_filesystem_physfs.a CMakeFiles/love_filesystem_physfs.dir/src/modules/filesystem/physfs/File.cpp.o CMakeFiles/love_filesystem_physfs.dir/src/modules/filesystem/physfs/Filesystem.cpp.o CMakeFiles/love_filesystem_physfs.dir/src/modules/filesystem/physfs/PhysfsIo.cpp.o
+/usr/bin/ranlib liblove_filesystem_physfs.a
