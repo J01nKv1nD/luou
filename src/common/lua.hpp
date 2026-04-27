@@ -1,6 +1,15 @@
 #ifndef LOVE_LUA_HPP
 #define LOVE_LUA_HPP
 
+#define lua_h
+#define lauxlib_h
+#define lualib_h
+#define luaconf_h
+#define LUA_H
+#define LAUXLIB_H
+#define LUALIB_H
+#define LUACONF_H
+
 #include <stddef.h>
 #include <string.h>
 #include <stdlib.h>
