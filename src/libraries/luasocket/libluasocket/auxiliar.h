@@ -45,7 +45,6 @@ void *auxiliar_checkgroup(lua_State *L, const char *groupname, int objidx);
 void auxiliar_setclass(lua_State *L, const char *classname, int objidx);
 void *auxiliar_getgroupudata(lua_State *L, const char *groupname, int objidx);
 void *auxiliar_getclassudata(lua_State *L, const char *groupname, int objidx);
-int auxiliar_typeerror(lua_State *L, int narg, const char *tname);
 
 #ifndef _WIN32
 #pragma GCC visibility pop

@@ -123,6 +123,15 @@ int luaL_newmetatable(lua_State* L, const char* tname)
 
 void* luaL_checkudata(lua_State* L, int ud, const char* tname)
 {
+    void* p = luaL_testudata(L, ud, tname);
+    if (p != NULL)
+        return p;
+
+    luaL_typeerrorL(L, ud, tname); // else error
+}
+
+void* luaL_testudata(lua_State* L, int ud, const char* tname)
+{
     void* p = lua_touserdata(L, ud);
     if (p != NULL)
     { // value is a userdata?
@@ -134,9 +143,13 @@ void* luaL_checkudata(lua_State* L, int ud, const char* tname)
                 lua_pop(L, 2); // remove both metatables
                 return p;
             }
+
+            lua_pop(L, 2); // remove both metatables
+            return NULL;
         }
     }
-    luaL_typeerrorL(L, ud, tname); // else error
+
+    return NULL;
 }
 
 void* luaL_checkbuffer(lua_State* L, int narg, size_t* len)

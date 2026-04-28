@@ -29,12 +29,7 @@
 
 #include <SDL3/SDL_main.h>
 
-// Lua
-extern "C" {
-	#include <lua.h>
-	#include <lualib.h>
-	#include <lauxlib.h>
-}
+#include "common/lua.hpp"
 
 #ifdef LOVE_WINDOWS
 #define WIN32_LEAN_AND_MEAN

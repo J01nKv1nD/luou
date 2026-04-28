@@ -29,12 +29,8 @@
 #include "deprecation.h"
 
 // Lua
-extern "C" {
-	#define LUA_COMPAT_ALL
-	#include <lua.h>
-	#include <lualib.h>
-	#include <lauxlib.h>
-}
+#define LUA_COMPAT_ALL
+#include "common/lua.hpp"
 
 // C++
 #include <exception>
@@ -331,6 +327,7 @@ int luax_table_insert(lua_State *L, int tindex, int vindex, int pos = -1);
  * @param pos The position to insert the loader in.
  **/
 int luax_register_searcher(lua_State *L, lua_CFunction f, int pos = -1);
+int luax_loadbuffer(lua_State *L, const char *data, size_t size, const char *chunkname);
 
 /**
  * Pushes a Lua representation of the given object onto the stack, creating and

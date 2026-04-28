@@ -3,8 +3,7 @@
 
 extern "C"
 {
-#include <lua.h>
-#include <lauxlib.h>
+#include "common/lua.hpp"
 }
 
 #include "../common/HTTPS.h"

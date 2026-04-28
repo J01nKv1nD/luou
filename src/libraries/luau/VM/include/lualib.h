@@ -8,6 +8,19 @@
 #define luaL_typeerror(L, narg, tname) luaL_typeerrorL(L, narg, tname)
 #define luaL_argerror(L, narg, extramsg) luaL_argerrorL(L, narg, extramsg)
 
+#if defined(LUA_COMPAT_ALL) || defined(LUA_COMPAT_5_1)
+#undef lua_pushcfunction
+#undef lua_pushcclosure
+#define LUAU_MACRO_3(_1, _2, _3, NAME, ...) NAME
+#define LUAU_MACRO_4(_1, _2, _3, _4, NAME, ...) NAME
+#define LUAU_PUSHCFUNCTION_2(L, fn) lua_pushcclosurek(L, fn, NULL, 0, NULL)
+#define LUAU_PUSHCFUNCTION_3(L, fn, debugname) lua_pushcclosurek(L, fn, debugname, 0, NULL)
+#define LUAU_PUSHCLOSURE_3(L, fn, nup) lua_pushcclosurek(L, fn, NULL, nup, NULL)
+#define LUAU_PUSHCLOSURE_4(L, fn, debugname, nup) lua_pushcclosurek(L, fn, debugname, nup, NULL)
+#define lua_pushcfunction(...) LUAU_MACRO_3(__VA_ARGS__, LUAU_PUSHCFUNCTION_3, LUAU_PUSHCFUNCTION_2)(__VA_ARGS__)
+#define lua_pushcclosure(...) LUAU_MACRO_4(__VA_ARGS__, LUAU_PUSHCLOSURE_4, LUAU_PUSHCLOSURE_3)(__VA_ARGS__)
+#endif
+
 struct luaL_Reg
 {
     const char* name;
@@ -44,6 +57,7 @@ LUALIB_API void luaL_checkany(lua_State* L, int narg);
 
 LUALIB_API int luaL_newmetatable(lua_State* L, const char* tname);
 LUALIB_API void* luaL_checkudata(lua_State* L, int ud, const char* tname);
+LUALIB_API void* luaL_testudata(lua_State* L, int ud, const char* tname);
 
 LUALIB_API void* luaL_checkbuffer(lua_State* L, int narg, size_t* len);
 

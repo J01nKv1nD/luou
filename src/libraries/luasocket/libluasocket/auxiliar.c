@@ -76,7 +76,7 @@ void auxiliar_add2group(lua_State *L, const char *classname, const char *groupna
 \*-------------------------------------------------------------------------*/
 int auxiliar_checkboolean(lua_State *L, int objidx) {
     if (!lua_isboolean(L, objidx))
-        auxiliar_typeerror(L, objidx, lua_typename(L, LUA_TBOOLEAN));
+        luaL_typeerror(L, objidx, lua_typename(L, LUA_TBOOLEAN));
     return lua_toboolean(L, objidx);
 }
 
@@ -141,14 +141,4 @@ void *auxiliar_getgroupudata(lua_State *L, const char *groupname, int objidx) {
 \*-------------------------------------------------------------------------*/
 void *auxiliar_getclassudata(lua_State *L, const char *classname, int objidx) {
     return luaL_testudata(L, objidx, classname);
-}
-
-/*-------------------------------------------------------------------------*\
-* Throws error when argument does not have correct type.
-* Used to be part of lauxlib in Lua 5.1, was dropped from 5.2.
-\*-------------------------------------------------------------------------*/
-int auxiliar_typeerror (lua_State *L, int narg, const char *tname) {
-  const char *msg = lua_pushfstring(L, "%s expected, got %s", tname,
-      luaL_typename(L, narg));
-  return luaL_argerror(L, narg, msg);
 }

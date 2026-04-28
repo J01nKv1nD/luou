@@ -27,12 +27,17 @@
 #include "Reference.h"
 #include "StringMap.h"
 
+extern "C" {
+#include "luacode.h"
+}
+
 // C++
 #include <algorithm>
 #include <iostream>
 #include <cstdint>
 #include <cstdio>
 #include <cstddef>
+#include <cstdlib>
 #include <cmath>
 #include <sstream>
 
@@ -1151,6 +1156,20 @@ void luax_register(lua_State *L, const char *name, const luaL_Reg *l)
 	}
 }
 
+int luax_loadbuffer(lua_State *L, const char *data, size_t size, const char *chunkname)
+{
+	size_t bytecodeSize = 0;
+	char *bytecode = luau_compile(data, size, nullptr, &bytecodeSize);
+
+	if (bytecode == nullptr)
+		return LUA_ERRSYNTAX;
+
+	int status = luau_load(L, chunkname, bytecode, bytecodeSize, 0);
+	free(bytecode);
+
+	return status;
+}
+
 void luax_runwrapper(lua_State *L, const char *filedata, size_t datalen, const char *filename, const love::Type &type, void *ffifuncs)
 {
 	luax_gettypemetatable(L, type);
@@ -1161,7 +1180,7 @@ void luax_runwrapper(lua_State *L, const char *filedata, size_t datalen, const c
 	{
 		std::string chunkname = std::string("=[love \"") + std::string(filename) + std::string("\"]");
 
-		luaL_loadbuffer(L, filedata, datalen, chunkname.c_str());
+		luax_loadbuffer(L, filedata, datalen, chunkname.c_str());
 		lua_pushvalue(L, -2);
 		if (ffifuncs != nullptr)
 			luax_pushpointerasstring(L, ffifuncs);

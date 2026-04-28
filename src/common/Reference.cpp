@@ -19,6 +19,7 @@
  **/
 
 #include "Reference.h"
+#include "common/lua.hpp"
 #include "runtime.h"
 
 namespace love

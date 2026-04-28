@@ -780,7 +780,7 @@ int w__openConsole(lua_State *L)
 
 int luaopen_love_nogame(lua_State *L)
 {
-	if (luaL_loadbuffer(L, (const char *)love::nogame_lua, sizeof(love::nogame_lua), "=[love \"nogame.lua\"]") == 0)
+	if (love::luax_loadbuffer(L, (const char *)love::nogame_lua, sizeof(love::nogame_lua), "=[love \"nogame.lua\"]") == 0)
 		lua_call(L, 0, 1);
 
 	return 1;
@@ -788,7 +788,7 @@ int luaopen_love_nogame(lua_State *L)
 
 int luaopen_love_jitsetup(lua_State *L)
 {
-	if (luaL_loadbuffer(L, jit_setup_lua, sizeof(jit_setup_lua), "=[love \"jitsetup.lua\"]") == 0)
+	if (love::luax_loadbuffer(L, jit_setup_lua, sizeof(jit_setup_lua), "=[love \"jitsetup.lua\"]") == 0)
 		lua_call(L, 0, 1);
 
 	return 1;
@@ -796,7 +796,7 @@ int luaopen_love_jitsetup(lua_State *L)
 
 int luaopen_love_arg(lua_State *L)
 {
-	if (luaL_loadbuffer(L, arg_lua, sizeof(arg_lua), "=[love \"arg.lua\"]") == 0)
+	if (love::luax_loadbuffer(L, arg_lua, sizeof(arg_lua), "=[love \"arg.lua\"]") == 0)
 		lua_call(L, 0, 1);
 
 	return 1;
@@ -804,7 +804,7 @@ int luaopen_love_arg(lua_State *L)
 
 int luaopen_love_callbacks(lua_State *L)
 {
-	if (luaL_loadbuffer(L, callbacks_lua, sizeof(callbacks_lua), "=[love \"callbacks.lua\"]") == 0)
+	if (love::luax_loadbuffer(L, callbacks_lua, sizeof(callbacks_lua), "=[love \"callbacks.lua\"]") == 0)
 		lua_call(L, 0, 1);
 
 	return 1;
@@ -812,7 +812,7 @@ int luaopen_love_callbacks(lua_State *L)
 
 int luaopen_love_boot(lua_State *L)
 {
-	if (luaL_loadbuffer(L, boot_lua, sizeof(boot_lua), "=[love \"boot.lua\"]") == 0)
+	if (love::luax_loadbuffer(L, boot_lua, sizeof(boot_lua), "=[love \"boot.lua\"]") == 0)
 		lua_call(L, 0, 1);
 
 	return 1;
