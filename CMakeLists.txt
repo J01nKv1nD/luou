@@ -1,8 +1,17 @@
+# CMakeLists.txt from luau, edited by J01nKv1nD Productions.
 # This file is part of the Luau programming language and is licensed under MIT License; see LICENSE.txt for details
+
 if(EXT_PLATFORM_STRING)
     include(EXTLuau.cmake)
     return()
 endif()
+
+# Block CMake from looking for the system Lua
+set(CMAKE_DISABLE_FIND_PACKAGE_Lua TRUE)
+set(Lua_FOUND FALSE)
+
+# Ensure the compiler uses YOUR headers first
+include_directories(BEFORE SYSTEM "${CMAKE_SOURCE_DIR}/src/libraries/luau/VM/include")
 
 cmake_minimum_required(VERSION 3.10)
 
