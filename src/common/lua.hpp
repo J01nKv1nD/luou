@@ -1,14 +1,14 @@
 #ifndef LOVE_LUA_HPP
 #define LOVE_LUA_HPP
 
-#define lua_h
-#define lauxlib_h
-#define lualib_h
-#define luaconf_h
 #define LUA_H
 #define LAUXLIB_H
 #define LUALIB_H
 #define LUACONF_H
+#define lua_h
+#define lauxlib_h
+#define lualib_h
+#define luaconf_h
 
 #include <stddef.h>
 #include <string.h>
@@ -19,11 +19,6 @@ extern "C" {
     #include "lualib.h"
     #include "luacode.h"
 }
-
-#define LUA_H
-#define LAUXLIB_H
-#define LUALIB_H
-#define LUACONF_H
 
 #define luaL_ref(L, i) lua_ref(L, i)
 #define luaL_unref(L, i, r) lua_unref(L, r)
