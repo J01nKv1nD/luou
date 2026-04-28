@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblove_3p_noise1234.a CMakeFiles/love_3p_noise1234.dir/src/libraries/noise1234/noise1234.cpp.o CMakeFiles/love_3p_noise1234.dir/src/libraries/noise1234/simplexnoise1234.cpp.o
-/usr/bin/ranlib liblove_3p_noise1234.a

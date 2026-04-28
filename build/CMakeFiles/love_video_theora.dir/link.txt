@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblove_video_theora.a CMakeFiles/love_video_theora.dir/src/modules/video/theora/Video.cpp.o CMakeFiles/love_video_theora.dir/src/modules/video/theora/OggDemuxer.cpp.o CMakeFiles/love_video_theora.dir/src/modules/video/theora/TheoraVideoStream.cpp.o
-/usr/bin/ranlib liblove_video_theora.a

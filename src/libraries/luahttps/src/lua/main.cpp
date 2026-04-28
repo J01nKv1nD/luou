@@ -4,7 +4,6 @@
 // Use Luau headers directly, NOT the system lua headers
 #include "lua.h"
 #include "lualib.h"
-#include "lauxlib.h"
 
 #include "../common/HTTPS.h"
 #include "../common/config.h"

@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblove_thread_root.a CMakeFiles/love_thread_root.dir/src/modules/thread/Channel.cpp.o CMakeFiles/love_thread_root.dir/src/modules/thread/LuaThread.cpp.o CMakeFiles/love_thread_root.dir/src/modules/thread/ThreadModule.cpp.o CMakeFiles/love_thread_root.dir/src/modules/thread/threads.cpp.o CMakeFiles/love_thread_root.dir/src/modules/thread/wrap_Channel.cpp.o CMakeFiles/love_thread_root.dir/src/modules/thread/wrap_LuaThread.cpp.o CMakeFiles/love_thread_root.dir/src/modules/thread/wrap_ThreadModule.cpp.o
-/usr/bin/ranlib liblove_thread_root.a

@@ -13,7 +13,6 @@ cmake_policy(SET CMP0077 NEW)
 cmake_policy(SET CMP0091 NEW)
 
 if(NOT CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-    message(WARNING "Building the Luau fuzzer requires Clang to be used. AppleClang is not sufficient.")
     return()
 endif()
 

@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblove_thread_sdl.a CMakeFiles/love_thread_sdl.dir/src/modules/thread/sdl/Thread.cpp.o CMakeFiles/love_thread_sdl.dir/src/modules/thread/sdl/threads.cpp.o
-/usr/bin/ranlib liblove_thread_sdl.a

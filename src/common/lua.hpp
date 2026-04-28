@@ -6,7 +6,6 @@
 #define LUALIB_H
 #define LUACONF_H
 #define lua_h
-#define lauxlib_h
 #define lualib_h
 #define luaconf_h
 

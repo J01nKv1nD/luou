@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblove_math.a CMakeFiles/love_math.dir/src/modules/math/BezierCurve.cpp.o CMakeFiles/love_math.dir/src/modules/math/MathModule.cpp.o CMakeFiles/love_math.dir/src/modules/math/RandomGenerator.cpp.o CMakeFiles/love_math.dir/src/modules/math/Transform.cpp.o CMakeFiles/love_math.dir/src/modules/math/wrap_BezierCurve.cpp.o CMakeFiles/love_math.dir/src/modules/math/wrap_Math.cpp.o CMakeFiles/love_math.dir/src/modules/math/wrap_RandomGenerator.cpp.o CMakeFiles/love_math.dir/src/modules/math/wrap_Transform.cpp.o
-/usr/bin/ranlib liblove_math.a

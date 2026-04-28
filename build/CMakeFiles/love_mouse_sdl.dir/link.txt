@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblove_mouse_sdl.a CMakeFiles/love_mouse_sdl.dir/src/modules/mouse/sdl/Cursor.cpp.o CMakeFiles/love_mouse_sdl.dir/src/modules/mouse/sdl/Mouse.cpp.o
-/usr/bin/ranlib liblove_mouse_sdl.a

@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblove_3p_glad.a CMakeFiles/love_3p_glad.dir/src/libraries/glad/glad.cpp.o
-/usr/bin/ranlib liblove_3p_glad.a

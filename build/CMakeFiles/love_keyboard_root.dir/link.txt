@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblove_keyboard_root.a CMakeFiles/love_keyboard_root.dir/src/modules/keyboard/Keyboard.cpp.o CMakeFiles/love_keyboard_root.dir/src/modules/keyboard/wrap_Keyboard.cpp.o
-/usr/bin/ranlib liblove_keyboard_root.a

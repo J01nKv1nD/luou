@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblove_system_sdl.a CMakeFiles/love_system_sdl.dir/src/modules/system/sdl/System.cpp.o
-/usr/bin/ranlib liblove_system_sdl.a

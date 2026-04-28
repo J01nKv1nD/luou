@@ -1,7 +1,8 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/j01nk/luou/build/cmake_install.cmake"
+		"/home/j01nk/luou/build/cmake_install.cmake",
+		"/home/j01nk/luou/build/fuzz/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

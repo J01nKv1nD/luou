@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblove_3p_lodepng.a CMakeFiles/love_3p_lodepng.dir/src/libraries/lodepng/lodepng.cpp.o
-/usr/bin/ranlib liblove_3p_lodepng.a

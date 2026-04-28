@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblove_event_sdl.a CMakeFiles/love_event_sdl.dir/src/modules/event/sdl/Event.cpp.o
-/usr/bin/ranlib liblove_event_sdl.a

@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblove_event_root.a CMakeFiles/love_event_root.dir/src/modules/event/Event.cpp.o CMakeFiles/love_event_root.dir/src/modules/event/wrap_Event.cpp.o
-/usr/bin/ranlib liblove_event_root.a

@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblove_physics_root.a CMakeFiles/love_physics_root.dir/src/modules/physics/Body.cpp.o CMakeFiles/love_physics_root.dir/src/modules/physics/Joint.cpp.o CMakeFiles/love_physics_root.dir/src/modules/physics/Shape.cpp.o
-/usr/bin/ranlib liblove_physics_root.a

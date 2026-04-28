@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-# This file is part of the Luau programming language and is licensed under MIT License; see LICENSE.txt for details
+set(LUAU_BUILD_FUZZ OFF CACHE BOOL "" FORCE)
+
 if(EXT_PLATFORM_STRING)
     include(EXTLuau.cmake)
     return()
@@ -339,7 +339,6 @@ foreach(LIB Luau.Ast Luau.Compiler Luau.Config Luau.Analysis Luau.CodeGen Luau.V
         endif()
     endif()
 endforeach()
-=======
 #
 # Copyright (c) 2006-2026 LOVE Development Team
 #
@@ -2459,4 +2458,3 @@ elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux")
 	install(FILES platform/unix/application-x-love-game.svg
 			DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/scalable/mimetypes)
 endif()
->>>>>>> 75048d579 (Commit: just commiting cuz i lowkey feel like it.)

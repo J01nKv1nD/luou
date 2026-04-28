@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblove_sound_root.a CMakeFiles/love_sound_root.dir/src/modules/sound/Decoder.cpp.o CMakeFiles/love_sound_root.dir/src/modules/sound/Sound.cpp.o CMakeFiles/love_sound_root.dir/src/modules/sound/SoundData.cpp.o CMakeFiles/love_sound_root.dir/src/modules/sound/wrap_Decoder.cpp.o CMakeFiles/love_sound_root.dir/src/modules/sound/wrap_Sound.cpp.o CMakeFiles/love_sound_root.dir/src/modules/sound/wrap_SoundData.cpp.o
-/usr/bin/ranlib liblove_sound_root.a
