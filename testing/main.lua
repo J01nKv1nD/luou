@@ -217,3 +217,23 @@ end
 function UtilTimeFormat(seconds)
   return string.format("%.3f", tostring(seconds))
 end
+
+function love.errorhandler(msg)
+  msg = tostring(msg)
+
+  -- write temp file
+  local path = "/tmp/lovetest_error.txt"
+  local f = io.open(path, "w")
+  if f then
+    f:write(msg)
+    f:close()
+  end
+
+  -- spawn konsole
+  os.execute(string.format(
+    'konsole --noclose -e bash -c "cat %s; echo; read -p \'press enter...\'"',
+    path
+  ))
+
+  return msg
+end
