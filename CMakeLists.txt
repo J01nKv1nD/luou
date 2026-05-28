@@ -1,46 +1,19 @@
 # CMakeLists.txt from luau, edited by J01nKv1nD Productions.
 # This file is part of the Luau programming language and is licensed under MIT License; see LICENSE.txt for details
 cmake_minimum_required(VERSION 3.10)
-
-add_library(LuauCompat STATIC
-    src/luau_compat.cpp
-)
-
-target_include_directories(LuauCompat PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
-
-target_include_directories(LuauCompat PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
-
-target_link_libraries(LuauCompat PUBLIC
-    Luau.VM
-    Luau.Compiler
-)
-
-target_compile_features(LuauCompat PRIVATE cxx_std_17)
-
-if(NOT MSVC)
-    target_compile_options(LuauCompat PRIVATE -Wall -Wno-unused-function)
-endif()
-
-set_target_properties(LuauCompat PROPERTIES
-    POSITION_INDEPENDENT_CODE ON
-)
-
+ 
 if(EXT_PLATFORM_STRING)
     include(EXTLuau.cmake)
     return()
 endif()
-
+ 
 # Block CMake from looking for the system Lua
 set(CMAKE_DISABLE_FIND_PACKAGE_Lua TRUE)
 set(Lua_FOUND FALSE)
-
+ 
 # Ensure the compiler uses YOUR headers first
-include_directories(BEFORE SYSTEM "${CMAKE_SOURCE_DIR}/src/libraries/luau/VM/include")
-
+include_directories(BEFORE SYSTEM "${CMAKE_SOURCE_DIR}/love-compat/include")
+ 
 option(LUAU_BUILD_CLI "Build CLI" ON)
 option(LUAU_BUILD_TESTS "Build tests" ON)
 option(LUAU_BUILD_WEB "Build Web module" OFF)
@@ -48,22 +21,22 @@ option(LUAU_WERROR "Warnings as errors" OFF)
 option(LUAU_STATIC_CRT "Link with the static CRT (/MT)" OFF)
 option(LUAU_EXTERN_C "Use extern C for all APIs" OFF)
 option(LUAU_BUILD_SHARED "Build as a shared library" OFF)
-
+ 
 if(LUAU_BUILD_SHARED AND NOT LUAU_EXTERN_C)
     message(FATAL_ERROR "LUAU_BUILD_SHARED requires LUAU_EXTERN_C to be ON")
 endif()
-
+ 
 cmake_policy(SET CMP0054 NEW)
 cmake_policy(SET CMP0091 NEW)
-
+ 
 if(LUAU_STATIC_CRT)
     cmake_minimum_required(VERSION 3.15)
     set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 endif()
-
+ 
 project(Luau LANGUAGES CXX C)
-
-if (LUAU_BUILD_SHARED)
+ 
+if(LUAU_BUILD_SHARED)
     add_library(Luau.Common SHARED)
     add_library(Luau.CLI.lib SHARED)
     add_library(Luau.Ast SHARED)
@@ -88,13 +61,12 @@ else()
     add_library(Luau.Require STATIC)
     add_library(isocline STATIC)
 endif()
-
+ 
 if(LUAU_BUILD_CLI)
     add_executable(Luau.Repl.CLI)
     add_executable(Luau.Analyze.CLI)
     add_executable(Luau.Ast.CLI)
     add_executable(Luau.Reduce.CLI)
-    add_executable(Luau.Compile.CLI)
     add_executable(Luau.Bytecode.CLI)
 
     # This also adds target `name` on Linux/macOS and `name.exe` on Windows
