@@ -1,5 +1,33 @@
 # CMakeLists.txt from luau, edited by J01nKv1nD Productions.
 # This file is part of the Luau programming language and is licensed under MIT License; see LICENSE.txt for details
+cmake_minimum_required(VERSION 3.10)
+
+add_library(LuauCompat STATIC
+    src/luau_compat.cpp
+)
+
+target_include_directories(LuauCompat PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+target_include_directories(LuauCompat PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+target_link_libraries(LuauCompat PUBLIC
+    Luau.VM
+    Luau.Compiler
+)
+
+target_compile_features(LuauCompat PRIVATE cxx_std_17)
+
+if(NOT MSVC)
+    target_compile_options(LuauCompat PRIVATE -Wall -Wno-unused-function)
+endif()
+
+set_target_properties(LuauCompat PROPERTIES
+    POSITION_INDEPENDENT_CODE ON
+)
 
 if(EXT_PLATFORM_STRING)
     include(EXTLuau.cmake)
@@ -12,8 +40,6 @@ set(Lua_FOUND FALSE)
 
 # Ensure the compiler uses YOUR headers first
 include_directories(BEFORE SYSTEM "${CMAKE_SOURCE_DIR}/src/libraries/luau/VM/include")
-
-cmake_minimum_required(VERSION 3.10)
 
 option(LUAU_BUILD_CLI "Build CLI" ON)
 option(LUAU_BUILD_TESTS "Build tests" ON)
